@@ -1,8 +1,11 @@
 package Jeu;
+import java.awt.event.*;
+
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-public class Case extends JButton {
+public class Case extends JButton implements ActionListener{
 	public static ImageIcon imageCaisse;
 	int x, y;
 
@@ -17,10 +20,14 @@ public class Case extends JButton {
 		this.setIcon(imageCaisse);
 		this.setBorder(null);
 		this.setBackground(null);
-		this.setBounds(x-15, y+28, imageCaisse.getIconWidth(), imageCaisse.getIconHeight());
-		
+		this.setBounds(x-15, y+28, imageCaisse.getIconWidth(), imageCaisse.getIconHeight());		
+		this.addActionListener(this);
 	}
 	
+	public void actionPerformed(ActionEvent ev){
+		System.out.println("coucou");
+		
+	}
 	
 }
 	
