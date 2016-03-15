@@ -56,13 +56,13 @@ public class Panneau extends JPanel {
 		JLabel compteur = new JLabel("coucou");
 		add(compteur);
 		
-		/*case1.addActionListener(new ActionListener() 
+		case1.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				System.out.println("coucou");
+				System.out.println("cou");
 			}
-	    });*/
+	    });
 	}
 	
 
