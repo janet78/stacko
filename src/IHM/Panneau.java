@@ -26,6 +26,7 @@ public class Panneau extends JPanel implements ActionListener{
 	public JLabel compte;
 	public int nbClicsRestants;
 	public Brique brique1;
+	public Brique brique2;
 	
 	
 	//grille
@@ -45,11 +46,13 @@ public class Panneau extends JPanel implements ActionListener{
 		//placement des cases et briques de la partie
 		int cAbs[] = {qA[0],qA[1],qA[2]};
 		int cOrd[] = {qA[0],qO[1],qO[0]};
-		brique1 = new Brique("rouge");
 		Empilement empilement1 = new Empilement();
-		empilement1.ajouterBrique(brique1);
+		empilement1.ajouterBrique(new Brique("rouge"));
+		Empilement empilement2 = new Empilement();
+		empilement2.ajouterBrique(new Brique("verte"));
+		Empilement [] listeEmp = {empilement1,empilement2};
 		
-		Partie partie1 = new Partie(cAbs,cOrd,, 5);
+		Partie partie1 = new Partie(cAbs, cOrd, listeEmp, 5);
 		
 		for(int i=0; i < cAbs.length; i++){	
 			partie1.creerListeCases()[i].addActionListener(this);

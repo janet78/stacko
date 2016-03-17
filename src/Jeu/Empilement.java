@@ -8,15 +8,11 @@ public class Empilement{
 	public Empilement(){
 		this.pileBriques = null;
 	}
-	
-	
+		
 	
 	public void ajouterBrique(Brique brique){
 		this.pileBriques.add(brique);
 	}
-	
-	
-
 	
 	
 	
