@@ -38,6 +38,12 @@ public class Brique extends JLabel {
 		this.setBounds(x, y, 100, 100);
 	}
 	
+	public void deplacer(int dx, int dy){
+		this.setX(x+dx);
+		this.setY(y+dy);
+		
+	}
+	
 	//getters et setters
 	public int getX() {
 		return x;
