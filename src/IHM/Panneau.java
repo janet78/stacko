@@ -25,6 +25,7 @@ public class Panneau extends JPanel implements ActionListener{
 	public JButton bMenu;
 	public JLabel compte;
 	public int nbClicsRestants;
+	public Brique brique1;
 	
 	
 	//grille
@@ -44,14 +45,12 @@ public class Panneau extends JPanel implements ActionListener{
 		//placement des cases et briques de la partie
 		int cAbs[] = {qA[0],qA[1],qA[2]};
 		int cOrd[] = {qA[0],qO[1],qO[0]};
-		int bAbs[] = {qA[0],qO[2]};
-		int bOrd[] = {qA[0],qO[0]}; 
-		String bCouleur[] = {"jaune", "bleue"};
+		brique1 = new Brique("rouge");
+		Empilement empilement1 = new Empilement();
+		empilement1.ajouterBrique(brique1);
 		
-		Partie partie1 = new Partie(cAbs,cOrd,bAbs,bOrd,bCouleur, 5);
-		for(int i=0; i < bAbs.length; i++){
-			add(partie1.creerListeBriques()[i]);
-		}
+		Partie partie1 = new Partie(cAbs,cOrd, listeEmpil, 5);
+		
 		for(int i=0; i < cAbs.length; i++){	
 			partie1.creerListeCases()[i].addActionListener(this);
 			add(partie1.creerListeCases()[i]);

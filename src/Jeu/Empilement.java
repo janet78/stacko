@@ -1,16 +1,19 @@
 package Jeu;
+import java.util.*;
 
 public class Empilement{
 
-	public Brique [] tabBriques;
+	public Vector<Brique>  pileBriques;
 	
-	public Empilement(Brique [] tabBriques){
-		this.tabBriques = tabBriques;
+	public Empilement(){
+		this.pileBriques = null;
 	}
 	
 	
 	
-	
+	public void ajouterBrique(Brique brique){
+		this.pileBriques.add(brique);
+	}
 	
 	
 
@@ -18,11 +21,11 @@ public class Empilement{
 	
 	
 	
-	//création de la combinaison de couleur en oui
+	//création de la combinaison de couleur 
 	public String [] getCombinaisonCouleurs(){
-		String [] listeCombinaisonCouleurs = new String[tabBriques.length];	
-		for(int i=0; i<tabBriques.length; i++){
-			listeCombinaisonCouleurs[i] = tabBriques[i].getCouleur();
+		String [] listeCombinaisonCouleurs = new String[pileBriques.size()];	
+		for(int i=0; i<pileBriques.size(); i++){
+			listeCombinaisonCouleurs[i] = pileBriques.elementAt(i).getCouleur();
 		}
 	return listeCombinaisonCouleurs;
 		
