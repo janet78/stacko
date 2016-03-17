@@ -49,7 +49,7 @@ public class Panneau extends JPanel implements ActionListener{
 		Empilement empilement1 = new Empilement();
 		empilement1.ajouterBrique(brique1);
 		
-		Partie partie1 = new Partie(cAbs,cOrd, listeEmpil, 5);
+		Partie partie1 = new Partie(cAbs,cOrd,, 5);
 		
 		for(int i=0; i < cAbs.length; i++){	
 			partie1.creerListeCases()[i].addActionListener(this);

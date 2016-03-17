@@ -1,20 +1,11 @@
 package Jeu;
-<<<<<<< HEAD
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-=======
-import java.awt.event.*;
-
->>>>>>> origin/master
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-<<<<<<< HEAD
 public class Case extends JButton implements MouseListener{
-=======
-public class Case extends JButton implements ActionListener{
->>>>>>> origin/master
 	public static ImageIcon imageCaisse;
 	int x, y;
 	Empilement empilement;
@@ -22,7 +13,7 @@ public class Case extends JButton implements ActionListener{
 
 
 	//constructeur
-	public Case(int x, int y, Empilement empilement){
+	public Case(int x, int y){
 		super();
 		this.x= x;
 		this.y= y;	
@@ -33,7 +24,6 @@ public class Case extends JButton implements ActionListener{
 		this.setIcon(imageCaisse);
 		this.setBorder(null);
 		this.setBackground(null);
-<<<<<<< HEAD
 		this.setBounds(x, y, imageCaisse.getIconWidth(), imageCaisse.getIconHeight());
 		addMouseListener(this);
 
@@ -52,10 +42,6 @@ public class Case extends JButton implements ActionListener{
 
 	public int getY() {
 		return y;
-=======
-		this.setBounds(x-15, y+28, imageCaisse.getIconWidth(), imageCaisse.getIconHeight());		
-		this.addActionListener(this);
->>>>>>> origin/master
 	}
 
 	public void setY(int y) {
@@ -66,7 +52,6 @@ public class Case extends JButton implements ActionListener{
 	}
 
 	
-<<<<<<< HEAD
 
 	public void mouseClicked(MouseEvent e) {
 		System.out.println("souris cliquŽe en "+this.getX()+" et "+this.getY());
@@ -95,10 +80,6 @@ public class Case extends JButton implements ActionListener{
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
-=======
-	public void actionPerformed(ActionEvent ev){
-		System.out.println("coucou");
->>>>>>> origin/master
 		
 	}
 	

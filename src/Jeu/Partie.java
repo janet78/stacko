@@ -1,5 +1,7 @@
 package Jeu;
 
+import java.awt.Component;
+
 import Jeu.Partie;
 
 public class Partie {
@@ -8,7 +10,7 @@ public class Partie {
 	//public int tabAbsBriques[];
 	//public int tabOrdBriques[];
 	//public String tabCouleursBriques[];
-	public Empilement listeEmpilements[];
+	public Empilement[] listeEmpilements;
 	public int nbCoups;
 	
 	
