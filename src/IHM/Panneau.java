@@ -82,12 +82,6 @@ public class Panneau extends JPanel implements ActionListener{
 		
 		g2.drawImage(this.imgFond, this.xFond, 0, null); //placement du fond
 	}
-
-
-
-
-	
-	
 		
 }	
 	
