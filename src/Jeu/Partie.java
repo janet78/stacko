@@ -26,9 +26,14 @@ public class Partie {
 	Case [] listeCases = new Case[tabAbsCases.length];
 	for(int i=0; i < tabAbsCases.length; i++){
 		listeCases[i] = new Case(tabAbsCases[i],tabOrdCases[i]);
-		}
-	return listeCases;		
+		listeCases[i].addEmpilement(vectEmpilement[i]);
 	}
+		}
+	return listeCases;	
+	
+	//ajouter empilement final
+	Empilementfinal=
+	
 	
 		//cration d'un tableau de briques
 	public Brique [] creerListeBriques(){
@@ -38,5 +43,7 @@ public class Partie {
 		}
 	return listeBriques;		
 		}
+	//Création d'un tableau d'empilement
+	
  
 }
