@@ -7,7 +7,8 @@ import javax.swing.JLabel;
 
 import IHM.Constantes;
 
-public class Brique extends JLabel {
+@SuppressWarnings("serial")
+public class Brique extends JLabel{
 	//variables
 	
 	private String couleur; 
@@ -17,8 +18,7 @@ public class Brique extends JLabel {
 	//constructeur
 	public Brique(String couleur) {
 		super();
-		//this.x = x;
-		//this.y = y;
+		
 
 		if(couleur =="rouge"){
 				this.couleur = Constantes.COULEUR_ROUGE;

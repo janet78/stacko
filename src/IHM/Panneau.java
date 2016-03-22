@@ -22,11 +22,11 @@ public class Panneau extends JPanel implements ActionListener{
 	private ImageIcon icoFond;
 	private Image imgFond;
 	public Case case1;
-	public JButton bMenu;
 	public JLabel compte;
 	public int nbClicsRestants;
 	public Brique brique1;
 	public Brique brique2;
+	public JButton bMenu;
 	
 	
 	//grille
@@ -44,8 +44,8 @@ public class Panneau extends JPanel implements ActionListener{
 		this.imgFond = this.icoFond.getImage();
 		
 		//placement des cases et briques de la partie
-		int cAbs[] = {qA[0],qA[1],qA[2]};
-		int cOrd[] = {qA[0],qO[1],qO[0]};
+		int cAbs[] = {qA[0],qA[1]};
+		int cOrd[] = {qA[0],qO[1]};
 		Empilement empilement1 = new Empilement();
 		empilement1.ajouterBrique(new Brique("rouge"));
 		Empilement empilement2 = new Empilement();
@@ -57,6 +57,10 @@ public class Panneau extends JPanel implements ActionListener{
 		for(int i=0; i < cAbs.length; i++){	
 			partie1.creerListeCases()[i].addActionListener(this);
 			add(partie1.creerListeCases()[i]);
+			for(Brique b : partie1.creerListeCases()[i].getEmpilement().getPileBriques()){
+			add(b);
+			}
+			System.out.println(partie1.creerListeCases()[i].getEmpilement());
 		}
 		
 		//affichage du nbCoups
@@ -85,6 +89,7 @@ public class Panneau extends JPanel implements ActionListener{
 		
 		g2.drawImage(this.imgFond, this.xFond, 0, null); //placement du fond
 	}
+	
 
 
 

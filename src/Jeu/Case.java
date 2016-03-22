@@ -1,10 +1,12 @@
 package Jeu;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Vector;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
+@SuppressWarnings("serial")
 public class Case extends JButton implements MouseListener{
 	public static ImageIcon imageCaisse;
 	int x, y;
@@ -16,8 +18,8 @@ public class Case extends JButton implements MouseListener{
 	public Case(int x, int y){
 		super();
 		this.x= x;
-		this.y= y;	
-		this.empilement = empilement;
+		this.y= y;
+		this.empilement =  new Empilement();
 		
 		ImageIcon imageCaisse = new ImageIcon(getClass().getResource("../Images/caisse.png"));
 		
@@ -48,14 +50,14 @@ public class Case extends JButton implements MouseListener{
 		this.y = y;
 	}
 	public Empilement getEmpilement() {
-		return empilement;
+		return this.empilement;
 	}
 
 	
 
 	public void mouseClicked(MouseEvent e) {
 		System.out.println("souris cliquée en "+this.getX()+" et "+this.getY());
-		System.out.println(this.getEmpilement());		
+				
 	}
 
 	

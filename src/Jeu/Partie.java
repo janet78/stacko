@@ -1,8 +1,5 @@
 package Jeu;
 
-import java.awt.Component;
-
-import Jeu.Partie;
 
 public class Partie {
 	public int tabAbsCases[];
@@ -15,6 +12,7 @@ public class Partie {
 		this.tabAbsCases= tabAbsCases;
 		this.tabOrdCases= tabOrdCases;
 		this.nbCoups = nbCoups;
+		this.listeEmpilements = listeEmpilements;
 		
 	}
 		
@@ -23,7 +21,10 @@ public class Partie {
 	Case [] listeCases = new Case[tabAbsCases.length];
 	for(int i=0; i < tabAbsCases.length; i++){
 		listeCases[i] = new Case(tabAbsCases[i],tabOrdCases[i]);
+		for(Brique b : this.listeEmpilements[i].getPileBriques()){
+		listeCases[i].getEmpilement().ajouterBrique(b);
 		}
+	}
 	return listeCases;		
 	}
 	
