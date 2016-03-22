@@ -6,13 +6,15 @@ public class Partie {
 	public int tabOrdCases[];
 	public Empilement[] listeEmpilements;
 	public int nbCoups;
+	public Empilement empilementFinal;
 	
 	
-	public Partie(int tabAbsCases[],int tabOrdCases[],Empilement listeEmpilements[], int nbCoups){
+	public Partie(int tabAbsCases[],int tabOrdCases[],Empilement listeEmpilements[], int nbCoups, Empilement empilementFinal){
 		this.tabAbsCases= tabAbsCases;
 		this.tabOrdCases= tabOrdCases;
 		this.nbCoups = nbCoups;
 		this.listeEmpilements = listeEmpilements;
+		this.empilementFinal = empilementFinal;
 		
 	}
 		

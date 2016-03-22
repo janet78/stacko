@@ -6,6 +6,9 @@ import java.util.Vector;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
+import IHM.Fenetre;
+import IHM.menuFinJeu;
+
 @SuppressWarnings("serial")
 public class Case extends JButton implements MouseListener{
 	public static ImageIcon imageCaisse;
@@ -56,9 +59,16 @@ public class Case extends JButton implements MouseListener{
 	
 
 	public void mouseClicked(MouseEvent e) {
-		System.out.println("souris cliquée en "+this.getX()+" et "+this.getY());
-				
+		//System.out.println("souris cliquée en "+this.getX()+" et "+this.getY());
+		Case CaseSupGauche = e(this.x-120, this.y-120);
+		Case CaseSupDroite = e(this.x+120, this.y-120);
+		this.getEmpilement().addElement(e.CaseSupGauche.getEmpilement());
+		this.getEmpilement().addElement(e.CaseSupDroite.getEmpilement());
+		if(this.getEmpilement() == partie1.empilementFinal){
+			new menuFinJeu();
+		}		
 	}
+	
 
 	
 	@Override
