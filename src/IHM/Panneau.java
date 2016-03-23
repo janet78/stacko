@@ -60,10 +60,7 @@ public class Panneau extends JPanel implements ActionListener{
 		for(int i=0; i < cAbs.length; i++){	
 			partie1.creerListeCases()[i].addActionListener(this);
 			add(partie1.creerListeCases()[i]);
-			for(Brique b : partie1.creerListeCases()[i].getEmpilement().getPileBriques()){
-			add(b);
-			}
-			System.out.println(partie1.creerListeCases()[i].getEmpilement());
+			add(partie1.creerListeCases()[i].getEmpilement().getPileBriques().get(0));
 		}
 		
 		//affichage du nbCoups
@@ -78,7 +75,6 @@ public class Panneau extends JPanel implements ActionListener{
 		this.bMenu.addActionListener(this);
 		this.bMenu.setBounds(20, 750, 80, 20);
 		add(this.bMenu);
-
 	}
 	
 	public void actionPerformed(ActionEvent e){
@@ -93,15 +89,7 @@ public class Panneau extends JPanel implements ActionListener{
 		Graphics g2 = (Graphics2D)g;
 		
 		g2.drawImage(this.imgFond, this.xFond, 0, null); //placement du fond
-	}
-	
-
-
-
-
-	
-	
-		
+	}		
 }	
 	
 	

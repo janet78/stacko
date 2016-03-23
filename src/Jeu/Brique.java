@@ -57,10 +57,10 @@ public class Brique extends JLabel{
 		return imgBrique;
 	}
 	
-	public void deplacer(int dx, int dy){
+	/*public void deplacer(int dx, int dy){
 		x+=dx;
 		y+=dy;
-		}
+		}*/
 	
 	
 }
