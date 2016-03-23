@@ -46,14 +46,14 @@ public class Panneau extends JPanel implements ActionListener{
 		//placement des cases et briques de la partie
 		int cAbs[] = {qA[0],qA[1]};
 		int cOrd[] = {qA[0],qO[1]};
-		Empilement empilement1 = new Empilement();
+		Empilement empilement1= new Empilement();
 		empilement1.ajouterBrique(new Brique("rouge"));
 		Empilement empilement2 = new Empilement();
 		empilement2.ajouterBrique(new Brique("verte"));
 		Empilement [] listeEmp = {empilement1,empilement2};
 		Empilement empFinal = new Empilement();
 		empFinal.ajouterBrique(new Brique("rouge"));
-		empFinal.ajouterBrique(new Brique("jaune"));
+		//empFinal.ajouterBrique(new Brique("jaune"));
 		
 		Partie partie1 = new Partie(cAbs, cOrd, listeEmp, 5, empFinal);
 		
@@ -63,7 +63,7 @@ public class Panneau extends JPanel implements ActionListener{
 			for(Brique b : partie1.creerListeCases()[i].getEmpilement().getPileBriques()){
 			add(b);
 			}
-			System.out.println(partie1.creerListeCases()[i].getEmpilement());
+			System.out.println(empFinal.getCombinaisonCouleurs());
 		}
 		
 		//affichage du nbCoups
