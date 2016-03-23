@@ -3,6 +3,7 @@ package IHM;
 import javax.swing.JFrame;
 
 public class Fenetre extends JFrame{
+	
 	public Fenetre(){
 		setTitle("Stacko");
 		setSize(800, 800);

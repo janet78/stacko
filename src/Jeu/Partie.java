@@ -1,32 +1,36 @@
 package Jeu;
 
-import Jeu.Partie;
 
 public class Partie {
 	public int tabAbsCases[];
 	public int tabOrdCases[];
-	public int tabAbsBriques[];
-	public int tabOrdBriques[];
-	public String tabCouleursBriques[];
+	public Empilement[] listeEmpilements;
 	public int nbCoups;
 	
 	
-	public Partie(int tabAbsCases[],int tabOrdCases[],int tabAbsBriques[],int tabOrdBriques[],String tabCouleursBriques[], int nbCoups){
+	public Partie(int tabAbsCases[],int tabOrdCases[],Empilement listeEmpilements[], int nbCoups){
 		this.tabAbsCases= tabAbsCases;
 		this.tabOrdCases= tabOrdCases;
-		this.tabAbsBriques= tabAbsBriques;
-		this.tabOrdBriques= tabOrdBriques;
-		this.tabCouleursBriques= tabCouleursBriques;
 		this.nbCoups = nbCoups;
+		this.listeEmpilements = listeEmpilements;
 		
 	}
 		
+	Empilement EmpilementFinal=new Empilement
 		//création d'un tableau de cases
 	public Case [] creerListeCases(){
 	Case [] listeCases = new Case[tabAbsCases.length];
 	for(int i=0; i < tabAbsCases.length; i++){
 		listeCases[i] = new Case(tabAbsCases[i],tabOrdCases[i]);
+
 		listeCases[i].addEmpilement(vectEmpilement[i]);
+
+		for(Brique b : this.listeEmpilements[i].getPileBriques()){
+		listeCases[i].getEmpilement().ajouterBrique(b);
+		}
+	}
+	return listeCases;		
+
 	}
 		}
 	return listeCases;	
@@ -34,7 +38,7 @@ public class Partie {
 	//ajouter empilement final
 	Empilementfinal=
 	
-	
+
 		//création d'un tableau de briques
 	public Brique [] creerListeBriques(){
 	Brique [] listeBriques = new Brique[tabAbsBriques.length];
@@ -46,4 +50,5 @@ public class Partie {
 	//CrÈation d'un tableau d'empilement
 	
  
+
 }
