@@ -38,8 +38,7 @@ public class Case extends JButton implements MouseListener{
 	//getters et setters
 	public int getX() {
 		return x;
-	}
-	
+	}	
 
 	public void setX(int x) {
 		this.x = x;
