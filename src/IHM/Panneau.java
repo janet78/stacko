@@ -51,8 +51,11 @@ public class Panneau extends JPanel implements ActionListener{
 		Empilement empilement2 = new Empilement();
 		empilement2.ajouterBrique(new Brique("verte"));
 		Empilement [] listeEmp = {empilement1,empilement2};
+		Empilement empFinal = new Empilement();
+		empFinal.ajouterBrique(new Brique("rouge"));
+		empFinal.ajouterBrique(new Brique("jaune"));
 		
-		Partie partie1 = new Partie(cAbs, cOrd, listeEmp, 5);
+		Partie partie1 = new Partie(cAbs, cOrd, listeEmp, 5, empFinal);
 		
 		for(int i=0; i < cAbs.length; i++){	
 			partie1.creerListeCases()[i].addActionListener(this);
